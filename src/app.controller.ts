@@ -6,7 +6,9 @@ import { TimeInterceptor } from './time-counter';
 @Controller()
 @UseInterceptors(TimeInterceptor)
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) {
+  }
+
   @Get('prigozhin')
   @Render('index.hbs')
   prigozin(@Req() req) {
@@ -36,4 +38,4 @@ export class AppController {
       user: 'Ulyana',
     };
   }
-}
+}git
